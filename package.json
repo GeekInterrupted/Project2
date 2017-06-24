@@ -1,0 +1,22 @@
+{
+  "name": "woke",
+  "version": "1.0.0",
+  "description": "Project 2",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.9",
+    "mysql2": "^1.3.5",
+    "path": "^0.12.7",
+    "sequelize": "^4.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Joe Cabralez, Olga O'Neal, Faiz Poonawala, Kotchaparn Wongkor",
+  "license": "ISC"
+}
