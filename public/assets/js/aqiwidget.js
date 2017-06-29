@@ -1,4 +1,4 @@
-var queryURL = "http://api.airvisual.com//v2/city?country=USA&state=Texas&city=Houston&key=MaxqriLpiqXDbHxK8";
+var queryURL = "https://api.airvisual.com//v2/city?country=USA&state=Texas&city=Houston&key=MaxqriLpiqXDbHxK8";
 
 $.ajax({
     url: queryURL,
