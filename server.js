@@ -3,6 +3,7 @@
 // =================================================================
 var express = require("express");
 var path = require("path");
+var favicon = require('static-favicon');
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
 
@@ -30,6 +31,18 @@ app.use(methodOverride("_method"));
 //set handlebars
 var exphbs = require("express-handlebars");
 
+
+
+
+
+
+
+
+
+
+
+
+
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
@@ -41,7 +54,7 @@ require("./routes/api-routes.js")(app);
 
 // app.use("/", router);
 
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ force: false }).then(function() {
     app.listen(PORT, function() {
         console.log("listening on port %s", PORT);
     });

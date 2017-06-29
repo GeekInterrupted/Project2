@@ -12,6 +12,9 @@ module.exports = function(sequelize, DataTypes) {
         copd: DataTypes.INTEGER,
         cvDisease: DataTypes.INTEGER,
         poverty: DataTypes.INTEGER,
+
+    }, {
+        timestamps: false
     })
     return Rank;
 };

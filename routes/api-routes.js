@@ -3,14 +3,19 @@
 // =============================================================
 var db = require("../models");
 
-// =============================================================
 // Routes
 // =============================================================
 module.exports = function(app) {
 
-    db.Rank.findById(2).then(function(rank) {
-        console.log(rank);
-    })
-
-
-}
+    app.get("/", function(req, res) {
+        db.Rank.findAll({
+            raw: true
+        }).then(function(dbRank) {
+            var hbsObject = {
+                ranks: dbRank
+            }
+            console.log(hbsObject);
+            res.render('index', hbsObject)
+        });
+    });
+};
