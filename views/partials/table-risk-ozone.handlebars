@@ -1,0 +1,24 @@
+<h5>People at Risk In 25 Most Ozone-Polluted Cities</h5>
+<table>
+    <tr>        
+            <th>2015 Rank</th>
+            <th>Metropolitan Statistical Areas</th>
+            <th>Total Population</th>
+            <th>Under 18</th>
+            <th>65 and Over</th>
+            <th>Pediatric Asthma</th>
+            <th>Adult Asthma</th>
+ 
+    </tr>
+    {{#each ranks}}
+         <tr>
+            <td>{{this.rank2015}}</td>
+            <td>{{this.metroArea}}</td>
+            <td>{{this.totalPop}}</td>
+            <td>{{this.under18}}</td>
+            <td>{{this.over65}}</td>
+            <td>{{this.pedAsthma}}</td>
+            <td>{{this.adultAsthma}}</td>
+        </tr>
+    {{/each}}
+</table>

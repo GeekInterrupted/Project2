@@ -1,67 +1,143 @@
 
   <nav class="light-red lighten-1" role="navigation">  
-    <div class="nav-wrapper container center"><a href= "#"><img class="responsive-img" src="assets/img/we-logo.png" alt="Eat Da Burger Icon"></a> 
+    <div class="nav-wrapper container center"><a href= "#"><img class="responsive-img" src="assets/img/we-banner.png" alt="Eat Da Burger Icon"></a> 
     </div>
   </nav>
   <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      
-      <h1 class="header center red-text">Go Green or Go Home!</h1>
+
+    
+  <div class="container">
+        <h5>Houston Current Conditions</h5>
+        <table id="table-current-conditions">
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>AQI</th>
+                    <th>Main</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Results of call -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+         
+            </tbody>
+        </table>
+    </div>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+
+
+    <div class="container"> 
       <div class="row center">
-        <h5 class="header col s12 light">centered text</h5>
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card-panel teal">
+
+
+
+              <span class="white-text">Here goes the description of the purpose of this site.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, accusamus. Atque incidunt quod cum quis nisi tempora odio, illum soluta commodi hic ea, perspiciatis, consequuntur reprehenderit eum nostrum, asperiores enim!
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+
   <div class="container">
     <div class="section">
        <div class="row">
-        <div class="col s12 m4">
-          <h5 class="center">left containter</h5>
-            <p class="light">
+        <div class="col s12 m6">
+          <h5 class="center">left container</h5>
+            <div class="card-panel teal">
+              <span class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis facere quod numquam. Non, omnis, eos? Fuga consequatur eligendi autem delectus, cumque eos soluta, odio aspernatur enim, rerum consectetur animi optio?
+              </span>
+            </div>
+          <p class="light"></p>
 
 
 
-<table>
-    <tr>
-        <th>Ranks Table</th>
-    </tr>
-    {{#each ranks}}
-        <tr>
-            <td>{{this.rank2015}}</td>
-            <td>{{this.metroArea}}</td>
-            <td>{{this.totalPop}}</td>
-            <td>{{this.under18}}</td>
-            <td>{{this.over65}}</td>
-            <td>{{this.pedAsthma}}</td>
-            <td>{{this.adultAsthma}}</td>
-        </tr>
-    {{/each}}
-</table>
-          
-        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
 
-        <div class="col s12 m4">
-          <div class="row">
-            <h5 class="center">center column</h5>
-  
-              
+        <div class="col s12 m6">
+          <h5 class="center">right container</h5>
+            <div class="card-panel teal">
+              <span class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur atque repudiandae quos hic! Optio, dolore architecto maiores, animi ut itaque, velit debitis modi sequi a iusto perspiciatis quas placeat libero!
+              </span>
+            </div>
+
+              <p>{{boogie 'this is a custom helper'}}</p>   
+        </div>
+
+{{> aqiwidget }}
+        
+        <div class="row">
+          <div class="col s12 m12">
+            
+{{> table-risk-ozone}}
+
           </div>
         </div>
-  
+         
+ 
           </div>
         </div>
       </div>  {{!--end container--}}
+
  
-  <footer class="page-footer green">
-  
-    <div class="footer-copyright">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  <footer class="page-footer teal">
+      <div class="footer-copyright">
       <div class="container">
-      <a class="white-text text-lighten-3" href="https://github.com/GeekInterrupted/projectwe">Project WE in Github</a>
+      <a class="white-text text-lighten-3" href="https://github.com/GeekInterrupted/ProjectWE">Project WE in Github</a>
       </div>
     </div>
   </footer>
-
-
-  
