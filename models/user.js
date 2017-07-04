@@ -1,16 +1,17 @@
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
-        user_name: DataTypes.STRING,
-        user_password: DataTypes.STRING,
-        user_email: DataTypes.STRING,
-        location: {
-            type: DataTypes.STRING,
-            defaultValue: "ABC"
-        },
+        twitterId: DataTypes.BIGINT,  
+        name: DataTypes.STRING,
+        password: DataTypes.STRING,
+        email: DataTypes.STRING,
+        location: DataTypes.STRING, 
         donation: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             defaultValue: 0
-        }
-    })
+        }, 
+        profile_picture: DataTypes.TEXT
+        },{
+            timestamps: false
+        })
     return User;
 }
