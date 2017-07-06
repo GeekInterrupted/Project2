@@ -6,6 +6,8 @@ var path = require("path");
 var favicon = require('static-favicon');
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
+var helpers = require('handlebars-helpers');
+var Handlebars = require('handlebars');
 
 // =================================================================
 // Initialize new Express app
@@ -35,24 +37,15 @@ var exphbs = require("express-handlebars");
 
 
 
-
-
-
-
-
-
-
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// var router = require("./controllers/takos_controllers.js"); - replaced with api-routes
 
 //import routes to give the server access to them.
-// require("./routes/html-routes.js")(app);
+require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
-// app.use("/", router);
+
 
 db.sequelize.sync({ force: false }).then(function() {
     app.listen(PORT, function() {

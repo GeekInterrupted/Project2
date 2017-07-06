@@ -5,15 +5,24 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-    app.get("/", function(req, res) {
-        db.Rank.findAll({
-            raw: true
-        }).then(function(dbRank) {
-            var hbsObject = {
-                ranks: dbRank
-            }
-            console.log(hbsObject);
-            res.render('index', hbsObject)
-        });
+
+
+    // Gets index page
+    app.get('/', function(req, res) {
+        res.render('index');
     });
+
+    app.get('/test', function(req, res) {
+        res.render('test');
+    });
+
+    app.get('/rankbycity', function(req, res) {
+        res.render('rankbycity');
+    });
+
+
+
+
+
+
 };

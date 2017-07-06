@@ -7,7 +7,7 @@ define(
     ) {
         'use strict'
 
-        Handlebars.registerHelper('boogie', function(text) {
+        Handlebars.registerHelper('hamburgerHelper', function(text) {
             return new Handlebars.SafeString(text);;
         });
     });

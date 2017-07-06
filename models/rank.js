@@ -1,3 +1,4 @@
+//Most contaminated cities in the US by rank - at risk population
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {

@@ -7,15 +7,20 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-    app.get("/", function(req, res) {
-        db.Rank.findAll({
-            raw: true
-        }).then(function(dbRank) {
-            var hbsObject = {
-                ranks: dbRank
-            }
-            console.log(hbsObject);
-            res.render('index', hbsObject)
+
+    //get AQI data for counties in TX 2016 
+    app.get("/aqi16", function(req, res) {
+        db.Annual16.findAll({}).then(function(dbAnnual16) {
+            res.json(dbAnnual16);
         });
     });
+
+    //get ranks for counties in TX 
+    app.get("/ranks", function(req, res) {
+        db.Rank.findAll({}).then(function(dbRank) {
+            res.json(dbRank);
+        });
+    });
+
+
 };
